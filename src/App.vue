@@ -9,10 +9,18 @@
   />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import CTASectionTwoBlocks from './components/CTASectionTwoBlocks.vue'
 
-const blocks = [
+interface Block {
+  id: number
+  image: string
+  title: string
+  text: string
+  url: string
+}
+
+const blocks: Block[] = [
   {
     id: 1,
     image: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&q=80',

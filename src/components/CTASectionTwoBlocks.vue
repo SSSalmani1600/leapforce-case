@@ -24,7 +24,7 @@
       <a
         v-for="block in blocks"
         :key="block.id"
-        :href="block.url || '#'"
+        :href="block.url ?? '#'"
         class="relative overflow-hidden rounded group block"
       >
         <img
@@ -49,20 +49,28 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
 
-const props = defineProps({
-  label:    { type: String, default: '' },
-  title:    { type: String, default: '' },
-  bodyCopy: { type: String, default: '' },
-  ctaText:  { type: String, default: '' },
-  ctaUrl:   { type: String, default: '#' },
-  blocks:   { type: Array,  default: () => [] },
-})
+interface Block {
+  id: number
+  image: string
+  title: string
+  text: string
+  url?: string
+}
 
-// Last word of title becomes italic (matches Figma design)
-const formattedTitle = computed(() => {
+const props = defineProps<{
+  label?: string
+  title?: string
+  bodyCopy?: string
+  ctaText?: string
+  ctaUrl?: string
+  blocks: Block[]
+}>()
+
+// Laatste woord van de titel wordt cursief (zoals in het Figma design)
+const formattedTitle = computed((): string => {
   if (!props.title) return ''
   const words = props.title.split(' ')
   const last = words.pop()
