@@ -1,0 +1,25 @@
+CTA Section - Two Blocks
+========================
+CMS Fields voorstel voor HubSpot / headless CMS
+
+SECTIE INSTELLINGEN
+-------------------
+label           Text        Kleine bovenste label (bijv. "Label", "Nieuws", "Diensten")
+title           Rich Text   Hoofdtitel — ondersteunt <em> voor cursief (laatste woord)
+body_copy       Text        Optionele subtekst onder de titel
+cta_text        Text        Tekst van de knop/link (bijv. "Meer lezen")
+cta_url         URL         Link van de knop
+
+BLOK 1 & BLOK 2 (herhaalbaar, max 2)
+--------------------------------------
+block_image     Image       Afbeelding voor het blok (aanbevolen: 800x600px, 4:3)
+block_title     Text        Titel op de afbeelding (bijv. "Dienst A")
+block_text      Text        Ondersteunende tekst op de afbeelding
+block_url       URL         Link van het blok
+
+NOTITIES
+--------
+- Beide blokken zijn verplicht voor de desktop layout (2 kolommen)
+- Op mobiel worden de blokken gestapeld (1 kolom)
+- De afbeelding wordt automatisch bijgesneden naar 4:3 verhouding
+- Hover: afbeelding zoomt licht in, pijlknop krijgt witte achtergrond
