@@ -20,7 +20,7 @@
     </div>
 
     <!-- Two blocks -->
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3">
       <a
         v-for="block in blocks"
         :key="block.id"
